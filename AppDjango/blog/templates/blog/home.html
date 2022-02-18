@@ -1,0 +1,22 @@
+{% extends "master.html" %}
+{% block meta %}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="{{ general.description }}">
+<meta name="author" content="">
+{% endblock %}
+{% block content %}
+<!-- Contenido -->
+<div class="container">
+    <div class="row">
+        <!-- Entradas -->
+        <div class="col-md-8">
+            <h1 class="my-4">{{ general.name }}
+            </h1>
+            Esta es la sección de contenido
+        </div>
+        {% include 'blog/vendor/sidebar.html' %}
+    </div>
+</div>
+{% endblock %}
