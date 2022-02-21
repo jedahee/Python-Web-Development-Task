@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'AppDjango.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'USER': 'dwes_manana',
+        'USER': 'root',
         'NAME': 'dwes_manana_django_proyecto_clase',
-        'PASSWORD': 'dwes_2122',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
