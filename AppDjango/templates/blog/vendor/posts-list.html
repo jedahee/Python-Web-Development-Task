@@ -1,0 +1,27 @@
+{% for post in posts %}
+<!-- Blog Post -->
+<div class="card mb-4">
+    
+    <img
+        class="card-img-top"
+        src="{{ post.featured_image.url}}"
+        alt="{{ post.title }}"
+    />
+
+    <div class="card-body">
+        <h2 class="card-title">{{ post.title }}</h2>
+        
+        <p class="card-text">
+            {{ post.content|striptags|safe|truncatewords_html:50 }}
+        </p>
+
+        <a href="{% url 'post' post.slug %}" class="btn btn-primary">Leer más</a
+        >
+    </div>
+
+    <div class="card-footer text-muted">
+        Publicado el {{ post.created_at }} por <a href="#">{{ post.user }}</a>
+    </div>
+    
+</div>
+{% endfor %}

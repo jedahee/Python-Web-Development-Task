@@ -1,0 +1,44 @@
+{% extends "master.html" %}
+{% block meta %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{{ post.description }}">
+    <meta name="author" content="">
+{% endblock %}
+
+{% block content %}
+<!-- Contenido -->
+<div class="container">
+    <div class="row">
+        <!-- Post Content Column -->
+        <div class="col-lg-8">
+            <!-- Título -->
+            <h1 class="mt-4">{{ post.title }}</h1>
+
+            <!-- Autor -->
+            <p class="lead">
+                Autor:
+                <a href="#">{{ post.user }}</a>
+            </p>
+            
+            <hr>
+            
+            <!-- Fecha/Hora -->
+            <p>Publicado el {{ post.created_at }}</p>
+            
+            <hr>
+            
+            <!-- Imagen -->
+            <img class="img-fluid rounded" src="{{ post.featured_image.url }}" alt="">
+            
+            <hr>
+            
+            <!-- Contenido -->
+            {{ post.content|safe }}
+            
+            <hr>
+        </div>
+        {% include 'blog/vendor/sidebar.html' %}
+    </div>
+</div>
+{% endblock %}
